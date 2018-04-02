@@ -1,7 +1,4 @@
 <?php
-
-namespace Monero;
-
 /**
  * jsonRPCClient.php
  *
@@ -11,6 +8,8 @@ namespace Monero;
  * @author Kacper Rowinski <krowinski@implix.com>
  * http://implix.com
  */
+namespace MoneroPHP;
+
 class jsonRPCClient
 {
     protected $url = null, $is_debug = false, $parameters_structure = 'array'; 
@@ -166,7 +165,7 @@ class jsonRPCClient
     {
         if ($pFailed)
         {
-            throw new RuntimeException($pErrMsg);
+            throw new \RuntimeException($pErrMsg);
         }
     }
     
